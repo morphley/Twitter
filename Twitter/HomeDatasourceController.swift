@@ -8,29 +8,31 @@
 
 import LBTAComponents
 
-
-
-
-class HomeDatasource: Datasource {
-    
-  let words = ["user1","user2","user3"]
-    
-    //override for numberOfItems
-    
-    override func numberOfItems(_ section: Int) -> Int {
-        return words.count // number of elements in the array
-    }
-}
-
-
 class HomeDatasourceController: DatasourceController {
-   
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let homeDateSource = HomeDatasource()
-        self.datasource = homeDateSource // 3 items in my collectionView 
+        self.datasource = homeDateSource // 3 items in my collectionView
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 150)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
+    
 }
+
+
+
+
+
+

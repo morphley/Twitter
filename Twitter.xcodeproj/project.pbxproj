@@ -12,6 +12,8 @@
 		A9A29BF41E8197470004A2B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A29BF31E8197470004A2B8 /* Assets.xcassets */; };
 		A9A29BFF1E81999B0004A2B8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29BFE1E81999B0004A2B8 /* HomeController.swift */; };
 		A9A29C011E81AFD30004A2B8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */; };
+		A9A29C061E81BF6D0004A2B8 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C051E81BF6D0004A2B8 /* Cells.swift */; };
+		A9A29C081E81BFA90004A2B8 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		A9A29BF81E8197470004A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A29BFE1E81999B0004A2B8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		A9A29C051E81BF6D0004A2B8 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		B2FB8570D04E1C996BE61A16 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,13 +80,39 @@
 		A9A29BEB1E8197470004A2B8 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				A9A29C041E81BF2C0004A2B8 /* Controller */,
+				A9A29C031E81BF270004A2B8 /* View */,
+				A9A29C021E81BF180004A2B8 /* Model */,
 				A9A29BEC1E8197470004A2B8 /* AppDelegate.swift */,
 				A9A29BF31E8197470004A2B8 /* Assets.xcassets */,
 				A9A29BF81E8197470004A2B8 /* Info.plist */,
 				A9A29BFE1E81999B0004A2B8 /* HomeController.swift */,
-				A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */,
 			);
 			path = Twitter;
+			sourceTree = "<group>";
+		};
+		A9A29C021E81BF180004A2B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A9A29C031E81BF270004A2B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9A29C051E81BF6D0004A2B8 /* Cells.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A9A29C041E81BF2C0004A2B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A29C081E81BFA90004A2B8 /* HomeDatasource.swift in Sources */,
 				A9A29BED1E8197470004A2B8 /* AppDelegate.swift in Sources */,
+				A9A29C061E81BF6D0004A2B8 /* Cells.swift in Sources */,
 				A9A29C011E81AFD30004A2B8 /* HomeDatasourceController.swift in Sources */,
 				A9A29BFF1E81999B0004A2B8 /* HomeController.swift in Sources */,
 			);

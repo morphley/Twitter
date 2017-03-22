@@ -12,8 +12,10 @@
 		A9A29BF41E8197470004A2B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A29BF31E8197470004A2B8 /* Assets.xcassets */; };
 		A9A29BFF1E81999B0004A2B8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29BFE1E81999B0004A2B8 /* HomeController.swift */; };
 		A9A29C011E81AFD30004A2B8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */; };
-		A9A29C061E81BF6D0004A2B8 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C051E81BF6D0004A2B8 /* Cells.swift */; };
+		A9A29C061E81BF6D0004A2B8 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C051E81BF6D0004A2B8 /* UserHeaderFooter.swift */; };
 		A9A29C081E81BFA90004A2B8 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */; };
+		A9A29C0A1E8282CD0004A2B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C091E8282CD0004A2B8 /* User.swift */; };
+		A9A29C0C1E82884C0004A2B8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C0B1E82884C0004A2B8 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +27,10 @@
 		A9A29BF81E8197470004A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A29BFE1E81999B0004A2B8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A9A29C001E81AFD30004A2B8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
-		A9A29C051E81BF6D0004A2B8 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		A9A29C051E81BF6D0004A2B8 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		A9A29C091E8282CD0004A2B8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A9A29C0B1E82884C0004A2B8 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B2FB8570D04E1C996BE61A16 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */,
+				A9A29C091E8282CD0004A2B8 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -102,7 +107,8 @@
 		A9A29C031E81BF270004A2B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A9A29C051E81BF6D0004A2B8 /* Cells.swift */,
+				A9A29C051E81BF6D0004A2B8 /* UserHeaderFooter.swift */,
+				A9A29C0B1E82884C0004A2B8 /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 			files = (
 				A9A29C081E81BFA90004A2B8 /* HomeDatasource.swift in Sources */,
 				A9A29BED1E8197470004A2B8 /* AppDelegate.swift in Sources */,
-				A9A29C061E81BF6D0004A2B8 /* Cells.swift in Sources */,
+				A9A29C0A1E8282CD0004A2B8 /* User.swift in Sources */,
+				A9A29C061E81BF6D0004A2B8 /* UserHeaderFooter.swift in Sources */,
 				A9A29C011E81AFD30004A2B8 /* HomeDatasourceController.swift in Sources */,
 				A9A29BFF1E81999B0004A2B8 /* HomeController.swift in Sources */,
+				A9A29C0C1E82884C0004A2B8 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

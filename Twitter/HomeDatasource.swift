@@ -20,7 +20,11 @@ class HomeDatasource: Datasource {
         let ehsanUser = User(name: "Ehsan!", username: "@ehsan",
                              bioText: "whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey  ", profileImage: #imageLiteral(resourceName: "profile_image"))
    
-        return [suloUser,ehsanUser]
+        
+        let laylaUser = User(name: "Layla!", username: "@Layla",
+                             bioText: "whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey  ", profileImage: #imageLiteral(resourceName: "profile_image"))
+        
+        return [suloUser,ehsanUser,laylaUser]
     }()
     
     

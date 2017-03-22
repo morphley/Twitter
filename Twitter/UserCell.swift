@@ -58,6 +58,7 @@ class UserCell: DatasourceCell {
         textView.text = "My name is Süleyman Omari and i try to become an iOS app developer and also have knowledge about web development, server, databases etc."
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.backgroundColor = .clear
+        textView.backgroundColor = UIColor.red
         return textView
     }()
     

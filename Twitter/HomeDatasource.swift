@@ -24,7 +24,10 @@ class HomeDatasource: Datasource {
         let laylaUser = User(name: "Layla!", username: "@Layla",
                              bioText: "whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey  ", profileImage: #imageLiteral(resourceName: "profile_image"))
         
-        return [suloUser,ehsanUser,laylaUser]
+        let essaakUser = User(name: "Essaak!", username: "@Essaak",
+                             bioText: "whats up hey heyh  ", profileImage: #imageLiteral(resourceName: "profile_image"))
+        
+        return [suloUser,ehsanUser,laylaUser, essaakUser]
     }()
     
     
@@ -46,6 +49,10 @@ class HomeDatasource: Datasource {
         return users[indexPath.item]
     }
     
+    //add a second section and try to delete the header and footer
+    override func numberOfSections() -> Int {
+        return 2
+    }
     override func numberOfItems(_ section: Int) -> Int {
         return users.count
     }

@@ -13,6 +13,7 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         setupNavigationBarItems()
         
         let homeDateSource = HomeDatasource()
@@ -23,11 +24,18 @@ class HomeDatasourceController: DatasourceController {
         
     //gap between two cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 0.5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+       
+        if section == 1{
+            
+            return .zero
+               } else{
+            return CGSize(width: view.frame.width, height: 50)
+        
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -54,7 +62,15 @@ class HomeDatasourceController: DatasourceController {
         return CGSize(width: view.frame.width, height: 200)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+       
+      
+        if section == 1{
+            
+            return .zero
+        } else{
+            return CGSize(width: view.frame.width, height: 64)
+            
+        }
     }
     
 }

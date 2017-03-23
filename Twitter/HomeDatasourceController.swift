@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     
@@ -20,26 +22,98 @@ class HomeDatasourceController: DatasourceController {
         
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         setupNavigationBarItems()
+        //
+        //        let homeDateSource = HomeDatasource()
+        //        self.datasource = homeDateSource // 3 items in my collectionView
         
-        let homeDateSource = HomeDatasource()
-        self.datasource = homeDateSource // 3 items in my collectionView
+        fetchHomeFeed()
     }
     
     
+    // create the tron object
+    
+    let tron = TRON(baseURL: "http://api.letsbuildthatapp.com")
+    
+    
+    class Home: JSONDecodable{
         
+        let users: [User]
+        
+        required init(json: JSON) throws {
+           // print("Now ready to parse json: \n", json)
+            
+            var users = [User]()
+            
+            let array = json["users"].array
+            for userJson in array! {
+                let name = userJson["name"].stringValue
+                let username = userJson["username"].stringValue
+                let bio = userJson["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            
+              //  print(userJson["name"].stringValue)
+            
+                print(user.username)
+                users.append(user)
+                
+            }
+            self.users = users
+            
+        }
+        }
+    
+    
+    class JSONError: JSONDecodable{
+        required init(json: JSON) throws {
+            print("JSON ERROR")
+        }
+    }
+    
+    
+    
+    fileprivate func fetchHomeFeed(){
+        // start our json fetch
+        
+        // returns a request object Generics left success right failure
+        let request: APIRequest<HomeDatasource,JSONError> = tron.request("/twitter/home")
+        
+        request.perform(withSuccess: { (homeDatasource) in
+            print("Succesfully fetched our json objects")
+            
+            
+            print(homeDatasource.users.count)
+            self.datasource = homeDatasource
+            
+            
+        }, failure: { (err) in
+            print("Failed to fetch json...", err)
+        })
+        
+        
+        
+        //normal you make a network request  and then parse the json using library lets
+        //use tron instead
+        //URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>)
+        
+        
+        
+    }
+    
+    
     //gap between two cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-       
+        
         if section == 1{
             
             return .zero
-               } else{
+        } else{
             return CGSize(width: view.frame.width, height: 50)
-        
+            
         }
     }
     
@@ -71,8 +145,8 @@ class HomeDatasourceController: DatasourceController {
     
     //Footer
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-       
-      
+        
+        
         if section == 1{
             
             return .zero

@@ -7,28 +7,39 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable{
     
-    let users: [User]={
     
-        let suloUser = User(name: "Süleyman", username: "@sulo",
-                            bioText: "Whats up", profileImage: #imageLiteral(resourceName: "profile_image") )
+        let users: [User]
         
-        let ehsanUser = User(name: "Ehsan!", username: "@ehsan",
-                             bioText: "whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey  ", profileImage: #imageLiteral(resourceName: "profile_image"))
+        required init(json: JSON) throws {
+            // print("Now ready to parse json: \n", json)
+            
+            var users = [User]()
+            
+            let array = json["users"].array
+            for userJson in array! {
+                let name = userJson["name"].stringValue
+                let username = userJson["username"].stringValue
+                let bio = userJson["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                
+                //  print(userJson["name"].stringValue)
+                
+                print(user.username)
+                users.append(user)
+                
+            }
+            self.users = users
+            
+        }
    
-        
-        let laylaUser = User(name: "Layla!", username: "@Layla",
-                             bioText: "whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey whats up hey heyh ey hey  ", profileImage: #imageLiteral(resourceName: "profile_image"))
-        
-        let essaakUser = User(name: "Essaak!", username: "@Essaak",
-                             bioText: "whats up hey heyh  ", profileImage: #imageLiteral(resourceName: "profile_image"))
-        
-        return [suloUser,ehsanUser,laylaUser, essaakUser]
-    }()
     
     
   //  let words = ["user1", "user2", "user3"]

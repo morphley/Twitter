@@ -38,6 +38,7 @@ class HomeDatasourceController: DatasourceController {
         }
     }
     
+    
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if let user = self.datasource?.item(indexPath) as? User {
@@ -61,6 +62,9 @@ class HomeDatasourceController: DatasourceController {
         
         return CGSize(width: view.frame.width, height: 200)
     }
+    
+    
+    //Footer
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
        
       

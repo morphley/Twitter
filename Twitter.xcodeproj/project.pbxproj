@@ -18,6 +18,7 @@
 		A9A29C0C1E82884C0004A2B8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C0B1E82884C0004A2B8 /* UserCell.swift */; };
 		A9A29C0E1E82C9AD0004A2B8 /* HomeDatasourceController+navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C0D1E82C9AD0004A2B8 /* HomeDatasourceController+navBar.swift */; };
 		A9A29C101E82E6900004A2B8 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C0F1E82E6900004A2B8 /* TweetCell.swift */; };
+		A9A29C121E82EEAB0004A2B8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A29C111E82EEAB0004A2B8 /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A9A29C0B1E82884C0004A2B8 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		A9A29C0D1E82C9AD0004A2B8 /* HomeDatasourceController+navBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navBar.swift"; sourceTree = "<group>"; };
 		A9A29C0F1E82E6900004A2B8 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		A9A29C111E82EEAB0004A2B8 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		B2FB8570D04E1C996BE61A16 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			children = (
 				A9A29C071E81BFA90004A2B8 /* HomeDatasource.swift */,
 				A9A29C091E8282CD0004A2B8 /* User.swift */,
+				A9A29C111E82EEAB0004A2B8 /* Tweet.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A29C081E81BFA90004A2B8 /* HomeDatasource.swift in Sources */,
+				A9A29C121E82EEAB0004A2B8 /* Tweet.swift in Sources */,
 				A9A29BED1E8197470004A2B8 /* AppDelegate.swift in Sources */,
 				A9A29C0A1E8282CD0004A2B8 /* User.swift in Sources */,
 				A9A29C101E82E6900004A2B8 /* TweetCell.swift in Sources */,
